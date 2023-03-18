@@ -1,13 +1,10 @@
-package com.efub.dddstudy.Chap3_애그리거트;
+package com.efub.dddstudy.Chap4_리포지터리와모델구현;
 
 import com.efub.dddstudy.Chap1_도메인모델시작하기.ShippingInfo;
-import com.efub.dddstudy.Chap2_아키텍처개요.OrderRepository;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 public class ChangeOrderService {
-	// 두 개 이상의 애그리거트를 변경 -> 응용 서비스에서 각 애그러그트의 상태를 변경해야 한다.
-	/*@Transactional
+	@Transactional
 	public void changeShippingInfo(OrderId id, ShippingInfo newShippingInfo, boolean useNewShippingAddrAsMemberAddr)
 	{
 		Order order = orderRepository.findById(id);
@@ -21,5 +18,5 @@ public class ChangeOrderService {
 
 		}
 
-	}*/
+	}
 }
