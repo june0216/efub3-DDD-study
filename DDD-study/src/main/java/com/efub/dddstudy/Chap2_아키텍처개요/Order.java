@@ -6,13 +6,17 @@ import com.efub.dddstudy.Chap1_도메인모델시작하기.Orderer;
 import com.efub.dddstudy.Chap1_도메인모델시작하기.ShippingInfo;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.List;
 
-@Entity// 구현의 편리함을 위해 인프라스트럭처에 대한 의존을 일부 도메인에 넣은 코드
-@Table(name = "TBL_ORDER")
+//@Entity// 구현의 편리함을 위해 인프라스트럭처에 대한 의존을 일부 도메인에 넣은 코드
+//@Table(name = "TBL_ORDER")
 public class Order {
-	//주문 도메인 모델의 데이터
 	private OrderNo id;// 식별자
+	//주문 도메인 모델의 데이터
+
 	private Orderer orderer;
 	private ShippingInfo shippingInfo;
 
