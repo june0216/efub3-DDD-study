@@ -18,7 +18,9 @@ public class OrderService {
 		Order order = new Order(orderNo, orderReq.getOrderLines(),
 				orderReq.getCoupons(), createOrder(member),
 				orderReq.getShippingInfo());
-		orer.calculationAmounts(this.discountCalcalculationService, member.getGrade());
+		order.calculationAmounts(this.discountCalcalculationService, member.getGrade());
 		return order;
 	}
+
+
 }
