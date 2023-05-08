@@ -2,7 +2,7 @@ package com.efub.dddstudy.Chap10_이벤트;
 
 import com.efub.dddstudy.Chap4_리포지터리와모델구현.ShippingInfo;
 
-public class ShippingInfoChangedEvent {
+public class ShippingInfoChangedEvent extends Event {
 	//이벤트
 	private String orderNumber;
 	private long timeStamp;
